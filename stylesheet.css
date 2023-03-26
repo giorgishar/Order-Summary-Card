@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display";
+    height: 100vh;
+    background-color: var(--Pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 25rem;
+}
+
+.card {
+    max-width: 32.7rem;
+    background-color: #F2F2F2;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+}
+
+.card__logo img {
+    width: 100%;
+
+}
+
+.card__content {
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.header {
+    font-weight: 900;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    color: #1F2E55;
+    margin-bottom: 1.6rem;
+}
+
+.para {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #717FA6;
+}
+
+.card__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 1.1rem;
+    background-color: var(--Very-pale-blue);
+    padding: 1.7rem 1.6rem;
+
+}
+
+.card__plan-box {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.card__plan-text {
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1F2E55;
+}
+
+.card__plan-price {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #717FA6;
+}
+
+.button {
+    font-family: inherit;
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.changebtn {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #382AE1;
+    text-transform: capitalize;
+    margin-left: 3rem;
+}
+
+.paymentbtn {
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 20px;
+    color: white;
+    background: #382AE1;
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+    border-radius: 11px;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.cancelbtn {
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 20px;
+    color: #717FA6;
+    margin-bottom: 3.2rem;
+}
+
+.paymentbtn:hover {
+    background: #766CF1;
+}
+
+.cancelbtn:hover {
+    color: #1F2E55;
+}
+
+.changebtn:hover {
+    color: #766CF1;
+}
+
+@media screen and (min-width: 90rem) {
+    .card {
+        max-width: 45rem;
+    }
+
+    .card__content {
+        margin: 4.8rem;
+    }
+
+    .header {
+        font-size: 2.8rem;
+        line-height: 3.7;
+    }
+
+    .para {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    .card__plan-text {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .card__plan-price {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .cancelbtn {
+        margin-bottom: 4.8rem;
+    }
+
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-size: 100% 45rem;
+    }
+}
